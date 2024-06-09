@@ -2,7 +2,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Vanilla</title>
+    <title>LlamaGen</title>
     <link href="./Vanilla_files/style.css" rel="stylesheet">
     <script type="text/javascript" src="./Vanilla_files/jquery.mlens-1.0.min.js"></script>
     <script type="text/javascript" src="./Vanilla_files/jquery.js"></script>
@@ -10,9 +10,9 @@
 
 <body>
     <div class="content">
-        <h1><strong>Vanilla Autoregressive Models are Scalable Image Generators</strong></h1>
-        <p id="authors"><span><a href="https://peizesun.github.io/"></a></span><a href="https://peizesun.github.io/">Peize Sun</a	> <a href="https://enjoyyi.github.io/">Yi Jiang</a> <a href="https://www.shoufachen.com/">Shoufa Chen</a>
-            <a href="https://jshilong.github.io/">Shilong Zhang</a> <a href="http://luoping.me/">Ping Luo</a> <a href="">Bingyue Peng</a> <a href="https://shallowyuan.github.io/">Zehuan Yuan</a><br>
+        <h1><strong>Autoregressive Model Beats Diffusion: Llama for Scalable Image Generation</strong></h1>
+        <p id="authors"><span><a href="https://peizesun.github.io/"></a></span><a href="https://peizesun.github.io/">Peize Sun</a> <a href="https://enjoyyi.github.io/">Yi Jiang</a> <a href="https://www.shoufachen.com/">Shoufa Chen</a>
+            <a href="https://jshilong.github.io/">Shilong Zhang</a> <a href="">Bingyue Peng</a> <a href="http://luoping.me/">Ping Luo</a> <a href="https://shallowyuan.github.io/">Zehuan Yuan</a><br>
             <br>
             <span style="font-size: 24px">HKU & ByteDance
   </span></p>
@@ -21,41 +21,41 @@
         <h3 style="text-align:center"><em>Vanilla autoregressive models without inductive biases on visual signals <br> can achieve state-of-the-art image generation performance if scaling properly</em></h3>
         <font size="+2">
             <p style="text-align: center;">
-                <a href="https://arxiv.org/abs/" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/FoundationVision/Vanilla" target="_blank">[Code]</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github" target="_blank">[Demo]</a>                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://arxiv.org/abs/" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/FoundationVision/LlamaGen" target="_blank">[Code]</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://huggingface.co/spaces/FoundationVision/LlamaGen" target="_blank">[Demo]</a>                &nbsp;&nbsp;&nbsp;&nbsp;
             </p>
         </font>
     </div>
     <div class="content">
         <h2 style="text-align:center;">Abstract</h2>
-        <p>In this report, we introduce Vanilla , a new family of image generation models that apply <b>next-token prediction paradigm</b> of large language models to visual generation domain. It is an affirmative answer to whether vanilla autoregressive
-            models <b>without inductive biases on visual signals</b> can achieve state-of-the-art image generation performance if scaling properly. We reexamine the design spaces of image tokenizer and image generation models, and their scalability properties.
-            The outcome of this exploration consists of: (1) An image tokenizer with downsample ratio of 16, reconstruction quality of 0.9 rFID and codebook usage of 97% on ImageNet benchmark. (2) A series of class-conditional image generation models
-            ranging from 111M to 3.1B parameters, achieving 2.18 FID on ImageNet 256×256 benchmarks, outperforming the popular diffusion models such as LDM, DiT. (3) A text-conditional image generation models with 775M parameters, from two-stage training
-            on LAION-COCO and high aesthetics quality images, demonstrating competitive performance of visual quality and text alignment. (4) We verify the effectiveness of LLM serving frameworks in optimizing the inference speed of image generation models
-            and achieve 326% - 414% speedup. We release all models and codes to facilitate open-source community of visual generation and multimodal foundation models.</p>
-    </div>
+        <p>We introduce LlamaGen, a new family of image generation models that apply original <b>next-token prediction</b> paradigm of large language models to visual generation domain. It is an affirmative answer to whether vanilla autoregressive models, e.g., Llama, 
+            without inductive biases on visual signals can achieve state-of-the-art image generation performance if scaling properly. We reexamine design spaces of image tokenizers, scalability properties of image generation models, and their training data quality. 
+            The outcome of this exploration consists of: (1) An image tokenizer with downsample ratio of 16, reconstruction quality of 0.94 rFID and codebook usage of 97\% on ImageNet benchmark. 
+            (2) A series of class-conditional image generation models ranging from 111M to 3.1B parameters, achieving 2.18 FID on ImageNet 256×256 benchmarks, outperforming the popular diffusion models such as LDM, DiT. 
+            (3) A text-conditional image generation models with 775M parameters, from two-stage training on LAION-COCO and high aesthetics quality images, demonstrating competitive performance of visual quality and text alignment. 
+            (4) We verify the effectiveness of LLM serving frameworks in optimizing the inference speed of image generation models and achieve 326\% - 414\% speedup. We release all models and codes to facilitate open-source community of visual generation and multimodal foundation models.</p>
+        </div>
     <div class="content">
         <h2>Key Content</h2>
-        <h3>
+        <!-- <h3>
             <ul>
                 <li>Two image tokenizers of downsample ratio 16 and 8.</li>
                 <li>Seven class-conditional generation models ranging from 100M to 3B parameters.</li>
                 <li>Two text-conditional generation models of 700M parameters.</li>
-                <li>Supported serving framework vllm to enable 300% - 400% speedup.</li>
+                <li>Supported LLM serving framework vllm to enable 300% - 400% speedup.</li>
             </ul>
-        </h3>
+        </h3> -->
 
         <p>
             <h3 style="text-align:center;">Image Tokenizers </h3>
 
             <img class="summary-img" src="./Vanilla_files/figs/tokenizer.png" style="width:70%;"> <br>
-            <h3 style="text-align:center;">Class-conditional Generation Models </h3>
+            <h3 style="text-align:center;">Class-conditional Image Generation Models </h3>
 
             <img class="summary-img" src="./Vanilla_files/figs/class-conditional.png" style="width:70%;"> <br>
-            <h3 style="text-align:center;">Text-conditional Generation Models </h3>
+            <h3 style="text-align:center;">Text-conditional Image Generation Models </h3>
 
             <img class="summary-img" src="./Vanilla_files/figs/text-conditional.png" style="width:70%;"> <br>
-            <h3 style="text-align:center;">Serving Framework Vllm </h3>
+            <h3 style="text-align:center;">Serving Framework vllm </h3>
 
             <img class="summary-img" src="./Vanilla_files/figs/vllm.png" style="width:70%;"> <br>
     </div>
@@ -89,15 +89,15 @@
 
     <div class="content">
         <h2>BibTex</h2>
-        <code> @article{,<br>
-  &nbsp;&nbsp;title={Vanilla Autoregressive Models are Scalable Image Generators},<br>
-  &nbsp;&nbsp;author={},<br>
+        <code> @article{<br>
+  &nbsp;&nbsp;title={Autoregressive Model Beats Diffusion: Llama for Scalable Image Generation},<br>
+  &nbsp;&nbsp;author={Peize Sun and Yi Jiang and Shoufa Chen and Shilong Zhang and Bingyue Peng and Ping Luo and Zehuan Yuan},<br>
   &nbsp;&nbsp;booktitle={},<br>
-  &nbsp;&nbsp;year={2022}<br>
+  &nbsp;&nbsp;year={2024}<br>
   } </code>
     </div>
     <div class="content" id="acknowledgements">
-        <p><strong>Acknowledgements</strong>: We thank xxx. We also thank DreamBooth for providing the page templates.
+        <p><strong>Acknowledgements</strong>: We thank <a href="https://dreambooth.github.io">DreamBooth</a> for providing the page templates.
 
         </p>
     </div>
