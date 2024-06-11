@@ -21,19 +21,20 @@
         <h3 style="text-align:center"><em>Vanilla autoregressive models without inductive biases on visual signals <br> can achieve state-of-the-art image generation performance if scaling properly</em></h3>
         <font size="+2">
             <p style="text-align: center;">
-                <a href="https://arxiv.org/abs/" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/FoundationVision/LlamaGen" target="_blank">[Code]</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://huggingface.co/spaces/FoundationVision/LlamaGen" target="_blank">[Demo]</a>                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://arxiv.org/abs/2406.06525" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/FoundationVision/LlamaGen" target="_blank">[Code]</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://huggingface.co/spaces/FoundationVision/LlamaGen"
+                    target="_blank">[Demo]</a> &nbsp;&nbsp;&nbsp;&nbsp;
             </p>
         </font>
     </div>
     <div class="content">
         <h2 style="text-align:center;">Abstract</h2>
-        <p>We introduce LlamaGen, a new family of image generation models that apply original <b>next-token prediction</b> paradigm of large language models to visual generation domain. It is an affirmative answer to whether vanilla autoregressive models, e.g., Llama, 
-            without inductive biases on visual signals can achieve state-of-the-art image generation performance if scaling properly. We reexamine design spaces of image tokenizers, scalability properties of image generation models, and their training data quality. 
-            The outcome of this exploration consists of: (1) An image tokenizer with downsample ratio of 16, reconstruction quality of 0.94 rFID and codebook usage of 97\% on ImageNet benchmark. 
-            (2) A series of class-conditional image generation models ranging from 111M to 3.1B parameters, achieving 2.18 FID on ImageNet 256×256 benchmarks, outperforming the popular diffusion models such as LDM, DiT. 
-            (3) A text-conditional image generation models with 775M parameters, from two-stage training on LAION-COCO and high aesthetics quality images, demonstrating competitive performance of visual quality and text alignment. 
-            (4) We verify the effectiveness of LLM serving frameworks in optimizing the inference speed of image generation models and achieve 326\% - 414\% speedup. We release all models and codes to facilitate open-source community of visual generation and multimodal foundation models.</p>
-        </div>
+        <p>We introduce LlamaGen, a new family of image generation models that apply original <b>next-token prediction</b> paradigm of large language models to visual generation domain. It is an affirmative answer to whether vanilla autoregressive models,
+            e.g., Llama, without inductive biases on visual signals can achieve state-of-the-art image generation performance if scaling properly. We reexamine design spaces of image tokenizers, scalability properties of image generation models, and their
+            training data quality. The outcome of this exploration consists of: (1) An image tokenizer with downsample ratio of 16, reconstruction quality of 0.94 rFID and codebook usage of 97\% on ImageNet benchmark. (2) A series of class-conditional
+            image generation models ranging from 111M to 3.1B parameters, achieving 2.18 FID on ImageNet 256×256 benchmarks, outperforming the popular diffusion models such as LDM, DiT. (3) A text-conditional image generation models with 775M parameters,
+            from two-stage training on LAION-COCO and high aesthetics quality images, demonstrating competitive performance of visual quality and text alignment. (4) We verify the effectiveness of LLM serving frameworks in optimizing the inference speed
+            of image generation models and achieve 326\% - 414\% speedup. We release all models and codes to facilitate open-source community of visual generation and multimodal foundation models.</p>
+    </div>
     <div class="content">
         <h2>Key Content</h2>
         <!-- <h3>
@@ -89,10 +90,10 @@
 
     <div class="content">
         <h2>BibTex</h2>
-        <code> @article{<br>
+        <code> @article{sun2024autoregressive,<br>
   &nbsp;&nbsp;title={Autoregressive Model Beats Diffusion: Llama for Scalable Image Generation},<br>
-  &nbsp;&nbsp;author={Peize Sun and Yi Jiang and Shoufa Chen and Shilong Zhang and Bingyue Peng and Ping Luo and Zehuan Yuan},<br>
-  &nbsp;&nbsp;booktitle={},<br>
+  &nbsp;&nbsp;author={Sun, Peize and Jiang, Yi and Chen, Shoufa and Zhang, Shilong and Peng, Bingyue and Luo, Ping and Yuan, Zehuan},<br>
+  &nbsp;&nbsp;journal={arXiv preprint arXiv:2406.06525},<br>
   &nbsp;&nbsp;year={2024}<br>
   } </code>
     </div>
